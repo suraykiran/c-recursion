@@ -24,3 +24,21 @@ int main()
 
 }
 //subsets using powerset
+  vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>>ans;
+        
+        for(int i=0;i<(1<<nums.size());i++)//we can use pow(nums.size(),2) instead of (1<<nums.size()).
+        {
+            vector<int>v;
+            for(int j=0;j<nums.size();j++)
+            {
+                if((1<<j)&i)
+                v.push_back(nums[j]);
+
+            }
+            ans.push_back(v);
+        }
+       return ans; 
+        
+    }
+};
