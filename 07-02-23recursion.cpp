@@ -23,4 +23,4 @@ int main()
     printsubsets(0,arr,n,d);
 
 }
-//using powerset
+//subsets using powerset
